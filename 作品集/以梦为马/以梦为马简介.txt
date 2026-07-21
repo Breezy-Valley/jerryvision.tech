@@ -1,0 +1,29 @@
+作品名称：以梦为马
+创作时间：2024.11.28-2024.12.11
+发布平台：软件学院视频号、河南师范大学抖音号、视频号；大象新闻、河南广播电视台、河南省教育厅等十余家省级媒体
+作品类型：微电影
+作品链接：https://www.hntv.tv/news/1/1867182610791546882（大象新闻）
+作品简介：围绕以梦为马主题核心，献给25考研学子的一部MV式纪录微电影。
+我负责的工作：创意指导、剪辑（主）、拍摄
+使用的软件或技术：剪映（剪辑）、Davinci Resolve（特效+调色）
+作品成果：本人主创的第一部被校媒收录且被河南广播电视台等省级媒体配音转载的作品，当日登榜大象热搜前三，全网达到万级播放量，一鸣惊人地实现作品从院级到校级再到省级的出圈突破。
+个人收获：片中字幕样式和剪辑手法开创了本人MV式微电影视觉风格，在后续作品“我们的可能”和“行则将至”中也有应用、迭代、改进。
+填写配置 (需要将 sk-xxxxxxxxxxxxxxxxxxxx 替换成您的 DMXAPI 令牌)。
+
+a. auth.json 中的配置：
+
+
+{"OPENAI_API_KEY": "sk-xxx"}
+b. config.toml 中的配置（直接粘贴下面的内容即可）： model_reasoning_effort 可选值为 high, medium, low，分别代表模型思考的努力程度（高、中、低）。
+
+
+model_provider = "DMX1"
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+disable_response_storage = true
+preferred_auth_method = "apikey"
+
+[model_providers.DMX1]
+name = "DMX1"
+base_url = "https://www.dmxapi.cn/v1"
+wire_api = "responses"

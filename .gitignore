@@ -1,0 +1,10 @@
+_server.log
+_server.err
+.edge-dom*/
+.chrome-dom*/
+*.pma
+_verify-*.png
+home-preview.png
+mobile-preview.png
+showreel-preview.png
+*.mp4

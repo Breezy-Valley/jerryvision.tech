@@ -1,0 +1,56 @@
+[
+  {
+    "id": "site-log",
+    "type": "blog",
+    "title": "这个网站先跑起来",
+    "date": "2026-07-21",
+    "summary": "博客会用来放创作现场、学习记录和阶段复盘。内容不必很正式，能持续更新更重要。",
+    "tags": ["网站", "随笔"],
+    "file": "content/blog/site-log.md"
+  },
+  {
+    "id": "shooting-mill",
+    "type": "blog",
+    "title": "《纱厂回响》拍摄手记",
+    "date": "2026-06-20",
+    "summary": "在新乡华新纱厂拍了三天，聊聊现场调度、光线问题和演员沟通的得失。",
+    "tags": ["创作", "拍摄"],
+    "file": "content/blog/shooting-mill.md"
+  },
+  {
+    "id": "color-grading-notes",
+    "type": "blog",
+    "title": "DaVinci Resolve 调色笔记：从一级校色到风格化",
+    "date": "2026-05-15",
+    "summary": "记录最近几个项目里用到的调色思路，包括色彩空间、节点树和一些实用技巧。",
+    "tags": ["技术", "调色"],
+    "file": "content/blog/color-grading-notes.md"
+  },
+  {
+    "id": "drone-campus",
+    "type": "blog",
+    "title": "无人机拍校园：航拍构图与飞行安全",
+    "date": "2025-11-10",
+    "summary": "《秋意漫洒》的拍摄复盘，聊聊大疆 Mini 系列在校园环境里的构图策略和安全注意事项。",
+    "tags": ["创作", "航拍", "技术"],
+    "file": "content/blog/drone-campus.md"
+  },
+  {
+    "id": "first-note",
+    "type": "note",
+    "title": "第一篇技术手记示例",
+    "date": "2026-07-21",
+    "summary": "这是一个 Markdown 示例。以后写技术手记时，复制对应 md 文件并在这里登记即可。",
+    "tags": ["入门"],
+    "file": "content/notes/first-note.md"
+  },
+  {
+    "id": "pf-track-workflow",
+    "type": "note",
+    "title": "PF Track 跟踪工作流备忘",
+    "date": "2026-06-01",
+    "summary": "记录 PF Track 从导入素材到导出跟踪数据的完整流程，包括常见坑和解决方案。",
+    "tags": ["VFX", "跟踪"],
+    "file": "content/notes/pf-track-workflow.md"
+  }
+]
