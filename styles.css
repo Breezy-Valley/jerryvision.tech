@@ -85,7 +85,7 @@ h1, h2, h3, p { margin-top: 0; }
 .page-heading { width: min(1080px, calc(100% - 48px)); margin: 24px auto 40px; }
 .page-heading .eyebrow { margin-bottom: 24px; color: #678078; }
 .page-heading h1 em { color: #5a9b8d; }
-.page-heading > p:last-child { max-width: 680px; margin: 25px 0 0; color: var(--ink-soft); font-size: 19px; line-height: 1.85; }
+.page-heading > p:last-child { max-width: 500px; margin: 12px 0 0; color: #9aa8a3; font-size: 14px; line-height: 1.6; }
 
 .showreel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 52px 24px; width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .work-card { min-width: 0; }
@@ -123,9 +123,8 @@ body.detail-open .showreel-page, body.detail-open > .site-header, body.detail-op
 .work-detail__meta { margin: 0 0 14px; color: var(--acid); font: 16px/1.4 var(--sans); letter-spacing: 0; }
 .work-detail__content h2 { max-width: 760px; margin: 0 0 20px; padding-bottom: 16px; border-bottom: 2px solid var(--acid); font: 500 clamp(1.8rem, 3.5vw, 2.8rem)/1.08 var(--serif); letter-spacing: -.03em; }
 .work-detail__gallery { columns: 3 190px; column-gap: 12px; margin: 0 0 24px; }
-.work-detail__gallery img { display: block; width: 100%; height: auto; break-inside: avoid; margin: 0 0 12px; object-fit: contain; background: rgba(255,255,255,.08); box-shadow: 0 14px 34px rgba(0,0,0,.22); cursor: pointer; transition: transform .4s cubic-bezier(.34,1.56,.64,1), filter .35s; animation: detailThumbIn .45s cubic-bezier(.16,.75,.25,1) both; }
-.work-detail__gallery:hover img { transform: scale(.92); filter: brightness(.72); }
-.work-detail__gallery:hover img:hover { transform: scale(1.04); filter: brightness(1); box-shadow: 0 24px 48px rgba(0,0,0,.5); z-index: 2; position: relative; }
+.work-detail__gallery img { display: block; width: 100%; height: auto; break-inside: avoid; margin: 0 0 12px; object-fit: contain; background: rgba(255,255,255,.08); box-shadow: 0 14px 34px rgba(0,0,0,.22); cursor: pointer; transition: transform .35s cubic-bezier(.34,1.56,.64,1), box-shadow .35s; animation: detailThumbIn .45s cubic-bezier(.16,.75,.25,1) both; }
+.work-detail__gallery img:hover { transform: scale(1.05); box-shadow: 0 22px 48px rgba(0,0,0,.52); z-index: 2; position: relative; }
 .work-detail__gallery img:nth-child(3n + 1) { width: 92%; margin-left: auto; }
 .work-detail__gallery img:nth-child(4n + 2) { width: 100%; }
 .work-detail__gallery img:nth-child(5n + 3) { width: 78%; }
