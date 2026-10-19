@@ -1,5 +1,6 @@
 _server.log
 _server.err
+.video-optimized/
 .edge-dom*/
 .chrome-dom*/
 *.pma
@@ -8,3 +9,9 @@ home-preview.png
 mobile-preview.png
 showreel-preview.png
 *.mp4
+!cinema-optimized/
+!cinema-optimized/*.mp4
+app/node_modules/
+app/dist/
+!app/public/cinema-optimized/
+!app/public/cinema-optimized/*.mp4

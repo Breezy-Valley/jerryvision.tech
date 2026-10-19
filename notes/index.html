@@ -3,35 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Jerry Yuan 的技术手记。" />
-    <title>技术手记 · Jerry Yuan</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <meta name="description" content="Jerry Yuan 的手记：创作现场、技术笔记与站点动态。" />
+    <meta name="theme-color" content="#0d151b" />
+    <title>手记 · Jerry Yuan</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../cinematic.css" />
+    <link rel="stylesheet" href="../journal.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="../index.html">JERRY <em>YUAN</em></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">MENU</button>
-      <nav class="site-nav" id="site-nav" aria-label="主导航">
-        <a href="../index.html">首页</a>
-        <a href="../showreel/index.html">作品集</a>
-        <a class="is-active" href="./index.html">技术手记</a>
-        <a href="../about/index.html">关于我</a>
-        <a href="../blog/index.html">博客 / 动态</a>
-      </nav>
-    </header>
-    <main class="page-main journal-page" data-journal="note">
-      <header class="page-heading">
-        <p class="eyebrow">NOTES</p>
-        <h1>问题、步骤、结果，<br /><em>都写清楚。</em></h1>
+    <div class="journal-page" data-journal="all">
+      <header class="journal-topbar">
+        <a class="journal-brand" href="../index.html">JERRY <i>YUAN</i></a>
+        <a class="journal-home" href="../index.html">← 返回首页</a>
       </header>
+      <div class="journal-hero">
+        <p class="scene-kicker">FIELD LOG · WORKBENCH</p>
+        <h1>手记</h1>
+        <p>创作现场、技术笔记，和一些还没想明白的事，按时间排在一起。</p>
+      </div>
       <section class="journal-layout">
         <aside class="journal-list" id="journal-list" aria-label="文章列表"></aside>
         <article class="markdown-article" id="journal-article"></article>
         <aside class="journal-toc" id="journal-toc" aria-label="文章目录"></aside>
       </section>
-    </main>
-    <footer class="site-footer"><span>© JERRY YUAN, 2026</span><span>NOTES WRITTEN WHILE LEARNING</span></footer>
+    </div>
     <script src="../site.js"></script>
   </body>
 </html>

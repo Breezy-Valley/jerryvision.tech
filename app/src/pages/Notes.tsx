@@ -1,0 +1,2 @@
+const notes = [{ title: 'PF Track 跟踪工作流备忘', date: '2026.06.01' }, { title: '第一篇技术手记示例', date: '2026.07.21' }];
+export function Notes() { return <section className="page content-page"><p className="kicker">FIELD LOG · WORKBENCH</p><h1>手记</h1><div className="note-list">{notes.map((note) => <article key={note.title}><time>{note.date}</time><h2>{note.title}</h2><p>问题、步骤、结果，都写清楚。</p></article>)}</div></section>; }

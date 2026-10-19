@@ -1,0 +1,10 @@
+.app-stage::after{position:absolute;z-index:1;inset:0;content:"";background:linear-gradient(90deg,rgba(5,11,16,.62),rgba(5,11,16,.12) 55%,rgba(5,11,16,.34)),linear-gradient(0deg,rgba(5,10,14,.64),transparent 45%);pointer-events:none}
+.app-stage{z-index:0;pointer-events:none}.app-stage video{z-index:20}.app-shell main,.app-header,.app-nav{position:relative;z-index:2}
+.page{animation:pageIn .68s cubic-bezier(.16,.75,.25,1) both}
+@keyframes pageIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.app-shell{min-height:100dvh}.app-stage img{object-position:center}.page{padding-top:15vh}}
+.app-nav{width:max-content;max-width:calc(100% - 32px)}
+.work-item{display:block;color:inherit;text-decoration:none}
+.work-item:hover h2{color:#f4c786;transform:translateX(8px)}
+.work-item h2{transition:transform .3s ease,color .3s ease}
+@media(max-width:700px){.app-nav{width:max-content;justify-content:center;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px;background:rgba(13,20,25,.78)}.app-nav button{flex:0 0 auto;padding:10px 16px}}

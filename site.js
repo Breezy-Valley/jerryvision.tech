@@ -8,7 +8,7 @@ if (menuButton && siteNav) {
   });
 }
 
-const workDetails = {
+const workDetails = window.workDetails = {
   dream: {
     title: '以梦为马',
     meta: '2024 · 纪录微电影',
@@ -423,9 +423,10 @@ if (journalPage) {
   };
 
   /* ---- fetch posts, build timeline ---- */
+  const typeLabels = { note: '技术手记', blog: '创作手记' };
   fetch(`${rootPrefix}content/posts.json`)
     .then((response) => response.json())
-    .then((posts) => posts.filter((post) => post.type === type))
+    .then((posts) => (type === 'all' ? posts : posts.filter((post) => post.type === type)))
     .then((posts) => {
       if (!posts.length) {
         list.innerHTML = '<p class="journal-loading">还没有文章。</p>';
@@ -451,7 +452,8 @@ if (journalPage) {
           if (post.tags && post.tags.length) {
             tagsHtml = '<span class="journal-tags">' + post.tags.map((t) => `<i>#${escapeHtml(t)}</i>`).join('') + '</span>';
           }
-          button.innerHTML = `<time>${post.date.substring(5)}</time><strong>${post.title}</strong><span>${post.summary}</span>${tagsHtml}`;
+          const typeBadge = type === 'all' ? `<em class="journal-type journal-type--${post.type}">${typeLabels[post.type] || post.type}</em>` : '';
+          button.innerHTML = `<time>${post.date.substring(5)}</time>${typeBadge}<strong>${post.title}</strong><span>${post.summary}</span>${tagsHtml}`;
           button.addEventListener('click', () => renderPost(post, button));
           list.appendChild(button);
         });

@@ -1,0 +1,1 @@
+export function About() { return <section className="page content-page about-page"><p className="kicker">ABOUT JERRY</p><h1>Jerry Yuan</h1><p>软件工程专业本科生，也是一名影像创作者。关注影像表达、计算机图形学和动画。</p><div className="about-facts"><span>软件工程 · 2024 级</span><span>影像创作 · 拍摄 / 剪辑 / 调色</span><a href="mailto:forest.3082006@gmail.com">forest.3082006@gmail.com</a></div></section>; }
