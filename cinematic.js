@@ -295,7 +295,23 @@ async function openDetail(workId, trigger, pushHistory = true) {
     item.append(term, description);
     facts.appendChild(item);
   });
-  if (work.link) {
+  link.classList.toggle('is-unavailable', Boolean(work.unavailable));
+  link.removeAttribute('aria-disabled');
+  link.removeAttribute('tabindex');
+  link.removeAttribute('role');
+  link.innerHTML = '<span>观看完整作品</span><span>↗</span>';
+  if (work.unavailable) {
+    link.hidden = false;
+    link.removeAttribute('href');
+    link.setAttribute('role', 'link');
+    link.setAttribute('aria-disabled', 'true');
+    link.setAttribute('tabindex', '-1');
+    link.replaceChildren(document.createTextNode(work.unavailable));
+    const icon = document.createElement('span');
+    icon.textContent = '×';
+    icon.setAttribute('aria-hidden', 'true');
+    link.appendChild(icon);
+  } else if (work.link) {
     link.hidden = false;
     link.href = assetPath(work.link);
   } else {

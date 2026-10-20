@@ -17,4 +17,4 @@
 
 Markdown 里也可以插入图片：
 
-![示例图片](../作品集/纱厂回响/纱厂回响-静帧1.jpg)
+![纱厂回响：影像暂未公开](../assets/mill-coming-soon.svg)

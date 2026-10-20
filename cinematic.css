@@ -167,6 +167,7 @@ img { display: block; }
 .cinema-detail__link { display: inline-flex; align-items: center; justify-content: space-between; width: min(360px, 100%); margin-top: 8px; padding: 17px 20px; border: 1px solid var(--accent); color: #111a20; background: var(--accent); font-size: 15px; font-weight: 700; transition: color var(--motion-base) var(--ease-motion), background var(--motion-base) var(--ease-motion), transform var(--motion-base) var(--ease-motion); }
 .cinema-detail__link:hover { color: var(--accent); background: transparent; transform: translateY(-3px); }
 .cinema-detail__link[hidden] { display: none; }
+.cinema-detail__link.is-unavailable { cursor: default; opacity: .6; color: #111a20; background: var(--accent); transform: none; }
 
 .cinema-detail.is-closing .cinema-detail__shade { animation: detailShadeOut var(--motion-base) var(--ease-motion) both; }
 .cinema-detail.is-closing .cinema-detail__panel { animation: detailPanelOut var(--motion-slow) var(--ease-motion) both; }

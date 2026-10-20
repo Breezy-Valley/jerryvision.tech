@@ -145,6 +145,7 @@ body.detail-open .showreel-page, body.detail-open > .site-header, body.detail-op
 .work-detail__facts dt { margin: 0 0 7px; color: rgba(247,249,244,.58); font-size: 15px; }
 .work-detail__facts dd { margin: 0; color: rgba(247,249,244,.9); font: 500 19px/1.55 var(--serif); }
 .work-detail__link[hidden] { display: none; }
+.work-detail__link.is-unavailable { cursor: default; opacity: .6; transform: none; }
 
 /* Lightbox — card-style popup, ~3/5 screen */
 .lightbox { position: fixed; z-index: 60; inset: 0; display: grid; place-items: center; padding: 60px; }

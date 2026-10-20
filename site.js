@@ -9,6 +9,29 @@ if (menuButton && siteNav) {
 }
 
 const workDetails = window.workDetails = {
+  fading: {
+    title: '褪色时刻',
+    meta: '2026 · AIGC 叙事短片',
+    cover: '../作品集/褪色时刻/褪色时刻-封面.jpg',
+    alt: '《褪色时刻》封面',
+    gallery: [
+      '../作品集/褪色时刻/褪色时刻-静帧1.jpg',
+      '../作品集/褪色时刻/褪色时刻-静帧2.jpg',
+      '../作品集/褪色时刻/褪色时刻-静帧3.jpg',
+      '../作品集/褪色时刻/褪色时刻-静帧4.jpg',
+      '../作品集/褪色时刻/褪色时刻-静帧5.jpg',
+      '../作品集/褪色时刻/褪色时刻-静帧6.jpg'
+    ],
+    intro: '一次抬头，一次错过。我的第一部 AIGC 创作作品，尝试呈现当代大学生日常中不被察觉的孤独与匆匆。',
+    facts: {
+      创作时间: '2026.09',
+      我的工作: '编剧、导演、剪辑、AIGCer',
+      创作方式: '独立完成，从剧本、导演构思到 AIGC 生成与剪辑',
+      作品时长: '1 分 48 秒',
+      创作记录: '首次 AIGC 影像创作'
+    },
+    unavailable: '作品待上传'
+  },
   dream: {
     title: '以梦为马',
     meta: '2024 · 纪录微电影',
@@ -27,7 +50,7 @@ const workDetails = window.workDetails = {
       创作时间: '2024.11.28 - 2024.12.11',
       我的工作: '创意指导、主剪辑、拍摄',
       使用工具: '剪映、DaVinci Resolve',
-      作品成果: '被校媒收录，并由河南广播电视台、省教育厅等省级媒体转载'
+      作品成果: '被校媒收录，并由河南广播电视台、省教育厅等十余家省级媒体收录转载'
     },
     link: 'https://www.hntv.tv/news/1/1867182610791546882'
   },
@@ -56,24 +79,17 @@ const workDetails = window.workDetails = {
   mill: {
     title: '纱厂回响',
     meta: '2026 · 叙事微电影',
-    cover: '../作品集/纱厂回响/纱厂回响-封面.jpg',
-    alt: '《纱厂回响》封面',
-    gallery: [
-      '../作品集/纱厂回响/纱厂回响-静帧1.jpg',
-      '../作品集/纱厂回响/纱厂回响-静帧2.jpg',
-      '../作品集/纱厂回响/纱厂回响-静帧3.jpg',
-      '../作品集/纱厂回响/纱厂回响-静帧4.jpg',
-      '../作品集/纱厂回响/纱厂回响-静帧5.jpg',
-      '../作品集/纱厂回响/纱厂回响-静帧6.jpg'
-    ],
+    cover: '../assets/mill-coming-soon.svg',
+    alt: '《纱厂回响》Coming Soon，影像暂未公开',
+    gallery: [],
     intro: '以新乡华新纱厂为场域，通过两名 00 后大学生的对话，把工人夜校、罢工、护厂等历史记忆落到可感知的个人命运里。',
     facts: {
       创作时间: '2026.6.9 - 2026.6.18',
-      我的工作: '编剧、摄影指导、录音指导、剪辑、调色',
+      我的工作: '联合编剧、摄影指导、联合剪辑、调色',
       使用工具: 'DaVinci Resolve',
-      作品成果: '课程实践满分作品，全校展播，并参加新片场校园精英大赛'
+      作品成果: '课程实践满分作品，全校展播'
     },
-    link: 'https://www.xinpianchang.com/a13735187?from=share&xpcApp=xpc&channel=link&type=URL'
+    unavailable: '暂不展示'
   },
   road: {
     title: '行则将至',
@@ -160,7 +176,7 @@ const workDetails = window.workDetails = {
     intro: '以行走和切换的节奏观察校园。项目资料正在整理，后续会补充作品介绍与画面素材。',
     facts: {
       创作时间: '2025',
-      我的工作: '融媒体创作项目',
+      我的工作: '创意指导、摄影、剪辑',
       当前状态: '资料归档中',
       后续计划: '补充静帧与创作说明'
     }
@@ -221,7 +237,7 @@ if (detail) {
     if (!work.gallery.length) {
       const note = document.createElement('p');
       note.className = 'work-detail__empty';
-      note.textContent = '静帧素材整理中。';
+      note.textContent = work.unavailable ? '影像暂未公开。' : '静帧素材整理中。';
       gallery.appendChild(note);
     }
 
@@ -235,7 +251,23 @@ if (detail) {
       facts.appendChild(item);
     });
 
-    if (work.link) {
+    link.classList.toggle('is-unavailable', Boolean(work.unavailable));
+    link.removeAttribute('aria-disabled');
+    link.removeAttribute('tabindex');
+    link.removeAttribute('role');
+    link.innerHTML = '观看作品 <span>↗</span>';
+    if (work.unavailable) {
+      link.hidden = false;
+      link.removeAttribute('href');
+      link.setAttribute('role', 'link');
+      link.setAttribute('aria-disabled', 'true');
+      link.setAttribute('tabindex', '-1');
+      link.replaceChildren(document.createTextNode(work.unavailable));
+      const icon = document.createElement('span');
+      icon.textContent = '×';
+      icon.setAttribute('aria-hidden', 'true');
+      link.appendChild(icon);
+    } else if (work.link) {
       link.hidden = false;
       link.href = work.link;
     } else {
